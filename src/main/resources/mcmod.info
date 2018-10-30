@@ -1,7 +1,7 @@
 [
 {
   "modid": "baubles",
-  "name": "Baubles",
+  "name": "PFBaubles",
   "description": "Adding a touch of bling to Minecraft",
   "version": "${version}",
   "mcversion": "${mcversion}",
