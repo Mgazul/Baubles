@@ -1,6 +1,7 @@
 package baubles.client.gui;
 
-import java.io.IOException;
+import baubles.client.ClientProxy;
+import baubles.common.container.ContainerPlayerExpanded;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.achievement.GuiStats;
 import net.minecraft.client.gui.inventory.GuiInventory;
@@ -11,8 +12,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
-import baubles.client.ClientProxy;
-import baubles.common.container.ContainerPlayerExpanded;
+
+import java.io.IOException;
 
 public class GuiPlayerExpanded extends InventoryEffectRenderer {
 

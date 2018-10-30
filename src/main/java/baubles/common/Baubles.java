@@ -1,13 +1,14 @@
-package baubles.common; 
-
-import java.io.File;
+package baubles.common;
 
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
 import baubles.api.cap.BaubleItem;
 import baubles.api.cap.BaublesCapabilities;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import baubles.api.cap.BaublesCapabilities.CapabilityBaubles;
+import baubles.api.cap.BaublesContainer;
+import baubles.api.cap.IBaublesItemHandler;
+import baubles.common.event.CommandBaubles;
+import baubles.common.network.PacketHandler;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -17,11 +18,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import baubles.api.cap.BaublesCapabilities.CapabilityBaubles;
-import baubles.api.cap.BaublesContainer;
-import baubles.api.cap.IBaublesItemHandler;
-import baubles.common.event.CommandBaubles;
-import baubles.common.network.PacketHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.File;
 
 @Mod(
 		modid = Baubles.MODID, 

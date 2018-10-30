@@ -1,8 +1,5 @@
 package baubles.common.event;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import baubles.api.BaubleType;
 import baubles.api.BaublesApi;
 import baubles.api.IBauble;
@@ -15,6 +12,9 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentTranslation;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommandBaubles extends CommandBase {
 	private List<String> aliases;

@@ -1,6 +1,11 @@
 package baubles.client;
 
+import baubles.api.BaubleType;
+import baubles.api.IBauble;
 import baubles.api.cap.BaublesCapabilities;
+import baubles.common.items.ItemRing;
+import baubles.common.network.PacketHandler;
+import baubles.common.network.PacketOpenBaublesInventory;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.text.TextFormatting;
@@ -12,11 +17,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
-import baubles.api.BaubleType;
-import baubles.api.IBauble;
-import baubles.common.items.ItemRing;
-import baubles.common.network.PacketHandler;
-import baubles.common.network.PacketOpenBaublesInventory;
 
 public class ClientEventHandler
 {

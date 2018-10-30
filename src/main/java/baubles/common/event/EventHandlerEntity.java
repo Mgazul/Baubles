@@ -1,15 +1,14 @@
 package baubles.common.event;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
-
+import baubles.api.BaublesApi;
+import baubles.api.IBauble;
 import baubles.api.cap.BaublesCapabilities;
+import baubles.api.cap.BaublesContainer;
+import baubles.api.cap.BaublesContainerProvider;
+import baubles.api.cap.IBaublesItemHandler;
+import baubles.common.Baubles;
+import baubles.common.network.PacketHandler;
+import baubles.common.network.PacketSync;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,14 +25,8 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import baubles.api.BaublesApi;
-import baubles.api.IBauble;
-import baubles.api.cap.BaublesContainer;
-import baubles.api.cap.BaublesContainerProvider;
-import baubles.api.cap.IBaublesItemHandler;
-import baubles.common.Baubles;
-import baubles.common.network.PacketHandler;
-import baubles.common.network.PacketSync;
+
+import java.util.*;
 
 public class EventHandlerEntity {
 
