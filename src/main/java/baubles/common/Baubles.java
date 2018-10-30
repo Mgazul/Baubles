@@ -26,14 +26,12 @@ import java.io.File;
 @Mod(
 		modid = Baubles.MODID, 
 		name = Baubles.MODNAME, 
-		version = Baubles.VERSION, 
-		guiFactory = "baubles.client.gui.BaublesGuiFactory",
-		dependencies = "required-after:forge@[14.21.0.2348,);")
+		version = Baubles.VERSION)
 public class Baubles {
 
 	public static final String MODID = "baubles";
 	public static final String MODNAME = "Baubles";
-	public static final String VERSION = "1.5.2";
+	public static final String VERSION = "1.0.0";
 
 	@SidedProxy(clientSide = "baubles.client.ClientProxy", serverSide = "baubles.common.CommonProxy")
 	public static CommonProxy proxy;
@@ -50,14 +48,6 @@ public class Baubles {
 	public void preInit(FMLPreInitializationEvent event) {
 		modDir = event.getModConfigurationDirectory();
 
-		try {
-			Config.initialize(event.getSuggestedConfigurationFile());
-		} catch (Exception e) {
-			Baubles.log.error("BAUBLES has a problem loading it's configuration");
-		} finally {
-			if (Config.config!=null) Config.save();
-		}
-
 		CapabilityManager.INSTANCE.register(IBaublesItemHandler.class,
 				new CapabilityBaubles<IBaublesItemHandler>(), BaublesContainer.class);
 
@@ -66,8 +56,6 @@ public class Baubles {
 
 		proxy.registerEventHandlers();
 		PacketHandler.init();
-
-		Config.save();
 	}
 
 	@EventHandler

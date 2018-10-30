@@ -14,7 +14,6 @@ import baubles.api.BaublesApi;
 import baubles.api.cap.IBaublesItemHandler;
 import baubles.api.render.IRenderBauble;
 import baubles.api.render.IRenderBauble.RenderType;
-import baubles.common.Config;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -30,7 +29,7 @@ public final class BaublesRenderLayer implements LayerRenderer<EntityPlayer> {
 	@Override
 	public void doRenderLayer(@Nonnull EntityPlayer player, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 		
-		if(!Config.renderBaubles || player.getActivePotionEffect(MobEffects.INVISIBILITY) != null)
+		if(player.getActivePotionEffect(MobEffects.INVISIBILITY) != null)
 			return;
 
 		IBaublesItemHandler inv = BaublesApi.getBaublesHandler(player);
